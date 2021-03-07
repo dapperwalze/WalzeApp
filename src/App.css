@@ -25,3 +25,9 @@
 .updateTaskButton {
   margin-top: 20px;
 }
+
+@media only screen and (max-width: 600px) {
+  .row {
+    margin-top: 0vh;
+  }
+}

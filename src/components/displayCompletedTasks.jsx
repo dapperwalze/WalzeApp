@@ -5,7 +5,7 @@ class DisplayCompletedTasks extends Component {
     return (
       <div className="card">
         <div className="card-header ">Completed Tasks</div>
-        <div className="card-body">
+        <div className="card-body ">
           <div className="list-group">{this.props.children}</div>
         </div>
       </div>

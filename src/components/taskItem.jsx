@@ -1,6 +1,5 @@
 import React from "react";
 import Rodal from "rodal";
-
 import AddTaskInputField from "./addTaskInputField";
 import { TaskButtons } from "./TaskButtons";
 import CallToActionButton from "./callToActionButton";

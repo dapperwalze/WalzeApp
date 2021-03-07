@@ -4,7 +4,6 @@ import NavBar from "./components/navBar";
 import CreateTaskCard from "./components/createTaskCard";
 import DisplayUncompletedTasks from "./components/displayUncompletedTasks";
 import DisplayCompletedTasks from "./components/displayCompletedTasks";
-
 import "bootstrap/dist/css/bootstrap.min.css";
 import "rodal/lib/rodal.css";
 import "./App.css";
@@ -97,21 +96,18 @@ class App extends Component {
       <div className="App">
         <NavBar appName={"WalzeApp"} />
         <div className="container">
-          <div className="row">
-            <div className="col"></div>
-            <div className="col-5">
+          <div className=" row justify-content-center align-item-center">
+            <div className=" col-sm-12 col-lg-5">
               <CreateTaskCard
                 handleInputChange={this.handleInputChange}
                 handleSubmitTask={this.handleSubmitTask}
                 inputValue={this.state.value}
               />
             </div>
-            <div className="col"></div>
           </div>
 
-          <div className="row">
-            <div className="col"></div>
-            <div className="col-5">
+          <div className="row justify-content-center align-item-center">
+            <div className="col-sm-12 col-lg-5">
               {uncompletedTasks.length > 0 && (
                 <DisplayUncompletedTasks>
                   {uncompletedTasks.map((task) => {
@@ -129,13 +125,10 @@ class App extends Component {
                 </DisplayUncompletedTasks>
               )}
             </div>
-
-            <div className="col"></div>
           </div>
 
-          <div className="row">
-            <div className="col"></div>
-            <div className="col-5">
+          <div className="row justify-content-center align-item-center">
+            <div className="col-sm-12 col-lg-5">
               {completedTasks.length > 0 && (
                 <DisplayCompletedTasks>
                   {completedTasks.map((task) => {
@@ -153,8 +146,6 @@ class App extends Component {
                 </DisplayCompletedTasks>
               )}
             </div>
-
-            <div className="col"></div>
           </div>
         </div>
       </div>
