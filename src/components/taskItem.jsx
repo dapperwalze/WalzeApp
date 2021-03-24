@@ -102,7 +102,11 @@ class TaskItem extends React.Component {
             <RiDeleteBinLine title={"Delete Task"} />
           </CallToActionButton>
         </div>
-        <Rodal visible={this.state.modalIsVisible} onClose={this.hideModal}>
+        <Rodal
+          className={"rodal"}
+          visible={this.state.modalIsVisible}
+          onClose={this.hideModal}
+        >
           <div>Task</div>
 
           <form onSubmit={this.handleFormSubmit}>

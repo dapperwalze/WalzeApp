@@ -1,3 +1,13 @@
+html {
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 .card {
   margin-top: 150px;
 }
@@ -29,5 +39,8 @@
 @media only screen and (max-width: 600px) {
   .row {
     margin-top: 0vh;
+  }
+  .rodal {
+    width: 300px;
   }
 }

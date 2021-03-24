@@ -12,6 +12,7 @@ import TaskItem from "./components/taskItem";
 class App extends Component {
   constructor(props) {
     super(props);
+
     this.state = {
       tasks: [],
       value: "",
@@ -84,6 +85,20 @@ class App extends Component {
 
     this.setState({ tasks });
   }
+
+  componentDidMount() {
+    const locallyStoredValue = localStorage.getItem("taskList");
+    const parsedTaskItem = JSON.parse(locallyStoredValue);
+    this.setState({
+      tasks: parsedTaskItem || [],
+    });
+  }
+
+  componentDidUpdate() {
+    const taskItem = JSON.stringify(this.state.tasks);
+    localStorage.setItem("taskList", taskItem);
+  }
+
   render() {
     const taskList = this.state.tasks;
     const completedTasks = taskList.filter(
